@@ -119,7 +119,11 @@ const getOnProcessClosedHandler =
         'spawned process returned non-success (' +
           processExitCode.toString() +
           ') exit code',
-        { details: { data: parsedStdOut } },
+        {
+          details: {
+            data: { exitCode: processExitCode, parsedStdOut, stdOut, stdErr },
+          },
+        },
       );
 
       const state = {
