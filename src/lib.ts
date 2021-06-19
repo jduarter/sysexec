@@ -201,5 +201,6 @@ export const sysExec = async <P extends SysExecParser<any>>(
       );
     },
     onUncaughtErrorHandler,
+    SysExecError,
   );
 };
